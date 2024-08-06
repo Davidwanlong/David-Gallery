@@ -1,0 +1,500 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Ubuntu", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    padding-top: 105px; /* 导航栏高度 */
+}
+/* 轮播图样式 start */
+.slider {
+    width:1226px;
+    height:850px;
+    overflow: hidden;
+    position: relative;
+}
+.slider-wrapper {
+    width: 100%;
+    height: 758px;
+    background-color: #758a99;
+}
+.slider-wrapper img {
+    /* width: 100%; */
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+}
+.slider-footer {
+    height: 80px;
+    background-color: rgb(100, 67, 68);
+    padding: 12px 12px 0 12px;
+    display: flex;
+    flex-direction: column; /* 使图标和文字垂直排列 */
+    align-items: center; 
+    justify-content: center;
+
+}
+.slider-footer .toggle {
+    position: absolute;
+    right: 0;
+    top: 360px;
+    width: 100%;
+    display: flex;  
+    justify-content: space-between;
+}
+.slider-footer .toggle button {
+    margin-right: 15px;
+    margin-left: 15px;
+    width: 35px;
+    height: 35px;
+    appearance: none;
+    border: none;
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 30px;
+}
+.slider-footer .toggle button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+.slider-footer p {
+    margin: 0;
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.slider-indicator {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+.slider-indicator li {
+    width: 8px;
+    height: 8px;
+    margin: 4px;
+    border-radius: 50%;
+    background:  #fff;
+    opacity:  0.4;
+    cursor: pointer;
+}
+.slider-indicator li.active {
+    width: 12px;
+    height: 12px;
+    opacity: 1;
+}
+/* 轮播图样式 end */
+
+
+.navigation {
+    position: fixed; /* 固定位置 */
+    top: 0; /* 固定在顶部 */
+    width: 100%; /* 宽度为 100% */
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 10px 20px;
+    background-color: #bbcdc5;
+    color: white;
+    z-index: 1000; /* 确保在其他内容之上 */
+}
+
+.logo img {
+    width: 140px; /* 根据需要调整宽度 */
+    height: auto; /* 保持比例 */
+}
+
+.wrap {
+    width: 1226px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+.title {
+    margin-top: 10px;
+    font-size: 2.5em;
+    color: #8c4356;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
+.navigation .logo {
+    font-size: 1.5em;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 10px;
+}
+
+.nav-links a {
+    color: gray;
+    text-decoration: none;
+    transition: color 0.3s; /* 添加过渡效果 */
+    font-size: 1.5em;
+}
+
+.nav-links a:hover {
+    /* color: #ff4500;  */
+    color:#1685a9;
+    text-decoration: underline;
+}
+
+/* 原轮播图样式 */
+.hero-banner {
+    height: 850px;
+    /* background-color: #ddd; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-banner .banner-img {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-banner .banner-img img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: cover; /* 确保图片覆盖整个区域并保持纵横比 */
+} 
+
+/* 内容区域样式 */
+.content {
+    width: 1226px;
+    margin: 0 auto; 
+}
+
+.content h2 {
+    margin-bottom: 10px;
+}
+
+.content hr {
+    margin-bottom: 20px;
+}
+
+.wrap-c {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.left-content,
+.right-content {
+    flex: 0 0 48%;
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+.left-content {
+    margin-right: 4%;
+}
+
+.right-content {
+    margin-left: 4%; 
+}
+
+.video {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.video video {
+    width: 100%; /* 确保视频宽度不超过父容器 */
+    height: auto; /* 保持视频的纵横比 */
+}
+
+.accordion-button {
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+    background-color: #f1f1f1;
+    border: none;
+    cursor: pointer;
+}
+
+.accordion-content {
+    display: none;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #ddd;
+}
+
+.accordion-button.active + .accordion-content {
+    display: block;
+}
+
+/* 艺术家部分样式 */
+.artist-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.artist {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.artist img {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+}
+
+/* 卡片部分样式 */
+.card-section {
+    padding: 20px;
+}
+
+.ex-container {
+    width: 1226px;
+    margin: 0 auto; 
+}
+
+.card-section h2 {
+    margin-bottom: 10px;
+}
+
+.card-section hr {
+    margin-bottom: 20px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 默认 4 列布局 */
+    gap: 10px; /* 设置卡片之间的间距 */
+    justify-items: center; /* 居中对齐 */
+}
+
+.link-no-decoration {
+    text-decoration: none;
+    color: inherit;
+}
+
+.card {
+    width: 100%; /* 确保卡片宽度填满其所在的网格单元格 */
+    padding: 10px;
+    /* border: 1px solid #ddd; */
+    text-align: center;
+    position: relative; /* 为了绝对定位大图片 */
+    overflow: visible;
+}
+
+.card img {
+    width: 270px;
+    height: 270px;
+    object-fit: cover;
+    transition: all 0.2s linear;
+    cursor: pointer;
+}
+
+.card img:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.2);
+}
+
+.card .large-image {
+    position: fixed;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(2.0);
+    max-width: 90%; /* 最大宽度不超过视口宽度的90% */
+    max-height: 90vh; /* 最大高度不超过视口高度的90% */
+    object-fit: contain; /* 保持长宽比显示图片，完全包含在容器内 */
+    display: none; /* 默认隐藏 */
+    z-index: 10; /* 让大图片在最上层 */
+}
+
+.card:hover .large-image {
+    display: block; /* 悬停时显示 */
+}
+
+.card .small-image {
+    z-index: 1; /* 让小图片在大图片下层 */
+}
+
+.painting-title {
+    width: 214px;
+    height: 21px;
+    color: #333;
+    line-height: 21px;
+    margin: 0 auto 2px;
+}
+
+.painting-size {
+    width: 214px;
+    height: 18px;
+    color: #b0b0b0;
+    font-size: 12px;
+    line-height: 18px;
+    margin: 0 auto 10px;
+}
+
+.painting-price {
+    color: #ff6700;
+    font-size: 14px;
+}
+
+/* 卡片部分样式 */
+
+/* 页脚样式 */
+footer {
+    padding: 20px;
+    background-color: #bbcdc5;
+    color: white;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-content .links {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-content .links a {
+    color: white;
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+
+/* 响应式布局 */
+@media (max-width: 900px) {
+    .navigation,
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav-links {
+        flex-direction: column; /* 竖着排列 */
+        align-items: center; /* 居中对齐 */
+        width: 100%; /* 宽度为 100% */
+        padding: 0; /* 去掉内边距 */
+        margin: 0; /* 去掉外边距 */   
+        position: absolute; 
+        top: 40%; /* 位置在导航栏下方 */
+        left: 50%;
+        transform: translateX(-20%)   
+    }
+    .wrap{
+        width: 100%;
+    }
+    .nav-links li {
+        margin: 5px 0; /* 垂直间距 */
+    }
+    .nav-links a {
+        display: block;
+        font-size: 1em;
+        width: 84px;
+        height: 22px;
+        background-color:  #827100;
+        color: aliceblue;
+        text-align: center;
+    }
+    .hero-banner {
+        height: 70%;
+    }
+    .wrap-c {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .content {
+        width: 100%;
+    }
+    .left-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    }
+     .video {
+        width: 100%;
+        margin:15px;
+    }
+    .artist-section,
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .artist {
+        flex: 0 0 50%; /* 在小屏幕下每行显示两个artist */
+        padding: 10px; /* 可以根据需要调整间距 */
+        box-sizing: border-box; /* 确保padding不会增加元素宽度 */
+    }
+    .right-content{
+            display: flex;
+            flex-wrap: wrap; /* 在小屏幕下换行 */
+    }
+    .artist-section {
+        display: grid;
+        grid-column: 1fr;
+    }
+    .ex-container {
+        width: 100%;
+        margin: 0 auto; 
+    }
+    .cards {
+        grid-template-columns: 1fr; /* 小屏幕时单列布局 */
+    }
+    .card {
+        width: 90%;
+        margin: 5px 0;
+    }
+    .painting-title,
+    .painting-size {
+        width: 100%;
+    }
+    .card:hover .large-image {
+        display: none !important; /* 小屏幕时禁用悬停显示 */
+    }
+    
+}
+
+/* 电梯样式 start */
+.elevator {
+    position: fixed;
+    left:50%;
+    top: 450px;
+    margin-left: 640px;
+    opacity: 0;
+    transition: all .5s;
+}
+.elevator-list a{
+     text-decoration: none;
+     color: white;
+     background-color: #789262; 
+     height: 50px;
+     width: 45px;
+     display: block;
+     margin: 10px;
+     text-align: center;
+     display: flex;
+     flex-direction: column; /* 使图标和文字垂直排列 */
+     align-items: center; 
+     justify-content: center;
+     border-radius: 2px; 
+     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+     transition: all 0.3s ease;  
+}
+.elevator-list a:hover {
+    background-color: #1685a9; /* 悬停时的背景颜色 */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* 悬停时的阴影效果 */
+}
+.elevator-list li{
+    list-style-type: none;
+}
+/* 电梯样式 end */
