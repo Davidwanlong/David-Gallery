@@ -5,7 +5,7 @@ fetch(`https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key
   .then(response => response.json())
   .then(data => {
     const photos = data.photos.photo;
-    const serviceContainer = document.querySelector('.archives-container'); // 找到 service-container div
+    const archivesContainer = document.querySelector('.archives-container'); 
 
     photos.forEach(photo => {
       const imageUrl = `https://live.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}_q.jpg`;
@@ -21,7 +21,7 @@ fetch(`https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key
       photoWrapper.appendChild(imgElement);
 
       // 将图片添加到 service-container
-      serviceContainer.appendChild(photoWrapper);
+      archivesContainer.appendChild(photoWrapper);
     });
   })
   .catch(error => console.error('Error fetching data:', error));
